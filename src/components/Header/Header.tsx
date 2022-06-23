@@ -1,5 +1,6 @@
 import React from 'react';
-import logoImage from '../assets/Component 21 – 1.png'
+import logoImage from '../../assets/Component 21 – 1.png'
+import './header.css'
 
 export const Header = () => {
   return (
@@ -7,7 +8,7 @@ export const Header = () => {
       <div className={'navigation'}>
           <span className={'logo'}>
             <img className={'logoImage'} src={logoImage} alt=""/>
-            <h4 className={'logoTitle'}>Agency</h4>
+            <span className={'logoTitle'}>Agency</span>
           </span>
         <nav className={'links'}>
           <span>About</span>
@@ -17,8 +18,8 @@ export const Header = () => {
         </nav>
         <button className={'Contact'}>Contact</button>
       </div>
-      <h1 className={'mainHeader'}>Portfolio</h1>
-      <p className={'subText'}>Agency provides a full service range including technical skills, design, business <br/>understanding.</p>
+      <span className={'mainHeader'}>Portfolio</span>
+      <span className={'subText'}>Agency provides a full service range including technical skills, design, business understanding.</span>
     </header>
   );
 };

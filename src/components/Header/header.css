@@ -1,0 +1,71 @@
+.header {
+    background-color: #28293E;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 135px;
+    }
+
+.navigation {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    }
+
+.logo {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    }
+
+.logoImage {
+    height: 45px;
+    width: 45px;
+    }
+
+.logoTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 15px;
+    padding-bottom: 4px;
+    }
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+    min-width: 530px;
+    }
+
+.links span {
+    cursor: pointer;
+    font-size: 16px;
+    }
+
+.Contact {
+    background-color: transparent;
+    border: 1px solid #FFFFFF4A;
+    border-radius: 6px;
+    color: #FFF;
+    height: 48px;
+    text-transform: uppercase;
+    width: 138px;
+    }
+
+.mainHeader {
+    color: #FFF;
+    font-size: 72px;
+    letter-spacing: -3.7px;
+    margin-bottom: 35px;
+    margin-top: 105px;
+    text-align: center;
+    }
+
+.subText {
+    color: #FFFFFFA3;
+    font-size: 16px;
+    line-height: 32px;
+    margin: auto auto 58px;
+    max-width: 620px;
+    text-align: center;
+    }
