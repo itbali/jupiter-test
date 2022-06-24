@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/jupiter-test/static/css/main.c5bf2763.css",
+    "main.css": "/jupiter-test/static/css/main.9c59e0f0.css",
     "main.js": "/jupiter-test/static/js/main.b89f288b.js",
     "static/js/787.3f5c585b.chunk.js": "/jupiter-test/static/js/787.3f5c585b.chunk.js",
     "static/media/Bitmap-3.png": "/jupiter-test/static/media/Bitmap-3.558a4f141686a3614469.png",
@@ -13,12 +13,12 @@
     "static/media/Bitmap-7.png": "/jupiter-test/static/media/Bitmap-7.3cd21eefe2e77eefadd3.png",
     "static/media/Bitmap-2.png": "/jupiter-test/static/media/Bitmap-2.4ea5c4ea409c2de2db05.png",
     "index.html": "/jupiter-test/index.html",
-    "main.c5bf2763.css.map": "/jupiter-test/static/css/main.c5bf2763.css.map",
+    "main.9c59e0f0.css.map": "/jupiter-test/static/css/main.9c59e0f0.css.map",
     "main.b89f288b.js.map": "/jupiter-test/static/js/main.b89f288b.js.map",
     "787.3f5c585b.chunk.js.map": "/jupiter-test/static/js/787.3f5c585b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5bf2763.css",
+    "static/css/main.9c59e0f0.css",
     "static/js/main.b89f288b.js"
   ]
 }
