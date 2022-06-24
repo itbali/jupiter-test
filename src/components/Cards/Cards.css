@@ -20,7 +20,7 @@
     width:calc(100% + 7px);
     height: calc(100% + 7px);
     top: -3.5px;
-    left: 0;
+    left: -3.5px;
     position: absolute;
     border-radius: 7px;
     border: 7px solid #16CD53;
