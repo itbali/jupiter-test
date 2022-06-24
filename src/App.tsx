@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Header} from "./components/Header/Header";
-import {filtersType} from "./store/appReducer";
+import {filtersType, loadMoreAc} from "./store/appReducer";
 import {Cards} from "./components/Cards/Cards";
+import {useDispatch} from "react-redux";
 
 function App() {
 
+  const dispatch = useDispatch()
   const [filter, setFilter] = useState<filtersType>
   ('')
 
@@ -15,6 +17,10 @@ function App() {
 
   const filterProcessHandler = (clickedFilter:filtersType)=>{
     setFilter(clickedFilter)
+  }
+
+  const onLoadMoreClickHandler = ()=>{
+    dispatch(loadMoreAc())
   }
 
   return (
@@ -43,9 +49,12 @@ function App() {
             onClick={()=>filterProcessHandler('Motion')}
           >Motion</li>
         </ul>
-        <select
+        <div          className="filterSelectButtonContainer"
+        >
+          <select
           name="filters"
           id="filters"
+          className="filterSelectButton"
         value={filter}
         onChange={(e)=>{filterProcessHandler(e.target.value as filtersType)}}>
           <option value={''} >Show All</option>
@@ -54,8 +63,10 @@ function App() {
           <option value={'Illustration'} >Illustration</option>
           <option value={'Motion'} >Motion</option>
         </select>
+        </div>
+        <Cards selectedFilter={filter}/>
+        <button onClick={onLoadMoreClickHandler} className={'loadMore'}>Load More</button>
       </section>
-      <Cards filterSelected={filter}/>
     </div>
   );
 }

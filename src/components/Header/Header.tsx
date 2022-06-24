@@ -16,7 +16,7 @@ export const Header = () => {
           <span>Pricing</span>
           <span>Blog</span>
         </nav>
-        <button className={'Contact'}>Contact</button>
+        <button className={'contact'}>Contact</button>
       </div>
       <span className={'mainHeader'}>Portfolio</span>
       <span className={'subText'}>Agency provides a full service range including technical skills, design, business understanding.</span>

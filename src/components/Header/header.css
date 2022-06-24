@@ -42,7 +42,7 @@
     font-size: 16px;
     }
 
-.Contact {
+.contact {
     background-color: transparent;
     border: 1px solid #FFFFFF4A;
     border-radius: 6px;
@@ -68,4 +68,16 @@
     margin: auto auto 58px;
     max-width: 620px;
     text-align: center;
+    }
+
+@media (max-width: 1040px){
+    .navigation{
+        justify-content: center;
+        }
+    .links{
+        display: none;
+        }
+    .contact{
+        display: none;
+        }
     }

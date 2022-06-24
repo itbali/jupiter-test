@@ -1,29 +1,44 @@
 import React from 'react';
-import {cardType, filtersType} from "../../store/appReducer";
-import {useSelector} from "react-redux";
+import {cardType, filtersType, selectCardAC} from "../../store/appReducer";
+import {useDispatch, useSelector} from "react-redux";
 import {rootStateType} from "../../store/store";
+import './Cards.css'
 
-type cardsPropType = { filterSelected:filtersType }
+type cardsPropType = { selectedFilter: filtersType }
 
-export const Cards = ({filterSelected}:cardsPropType) => {
+export const Cards = ({selectedFilter}: cardsPropType) => {
 
+  const dispatch = useDispatch()
   const cards = useSelector<rootStateType, cardType[]>(state => state.appReducer.cards)
 
   let filteredCards = [...cards]
+  console.log(selectedFilter)
 
-  if (filterSelected) {
-    filteredCards = filteredCards.filter(el => el.type === filterSelected)
+  if (selectedFilter) {
+    filteredCards = filteredCards.filter(el => el.type === selectedFilter)
   }
 
+  console.log(filteredCards)
+  const finalCardClass = (isSelected: boolean) => {
+    return isSelected ? 'card selectedCard' : 'card'
+  }
+  const onCardSelectHandler = (id: string) => {
+    dispatch(selectCardAC(id))
+  }
   return (
-    <div className={'container'}>
-      {filteredCards.map(el=>{
+    <div className={'cardsContainer'}>
+      {filteredCards.map(el => {
         return (
-          <div key={el.id} className={"card"}>
-            <img src={el.src} alt="ni img" className={"cardImag"}/>
+          <div
+            key={el.id}
+            className={finalCardClass(el.isSelected)}
+            onClick={() => {
+              onCardSelectHandler(el.id)
+            }}>
+            <img src={el.src} alt="no img" className={"cardImag"}/>
             <div className={"cardInner"}>
-              <span className={"cardType"}>{el.type}</span>
-              <span className={"cardTitle"}>{el.title}</span>
+              <div className={"cardType"}>{el.type}</div>
+              <div className={"cardTitle"}>{el.title}</div>
             </div>
           </div>
         )
